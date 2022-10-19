@@ -20,7 +20,8 @@ def wake_up(update, context):
     name = update.message.chat.first_name
     button = ReplyKeyboardMarkup([
         ['акустика', 'жизнь это как... эммм...'],
-        ['мерзкий мир вымышленной реальности']
+        ['мерзкий мир вымышленной реальности', 'глупости'],
+        ['демки']
     ], resize_keyboard=True)
 
     context.bot.send_message(
