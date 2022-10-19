@@ -36,8 +36,10 @@ def what(update, context):
     text = update.message.text
     if text == 'жизнь это как... эммм...':
         context.bot.send_photo(chat.id, open('img/live.jpeg', 'rb+'))
-        for music in os.listdir('music/singls'):
-            context.bot.send_audio(id, open('music/singls/' + music, 'rb+'))
+        context.bot.send_audio(id, open('music/singls/жизнь это как.mp3', 'rb+'))
+    elif text == 'глупости':
+        context.bot.send_photo(chat.id, open('img/lol.jpg', 'rb+'))
+        context.bot.send_audio(id, open('music/singls/глупости.mp3', 'rb+'))
     elif text == 'акустика':
         context.bot.send_photo(id, open('img/home.JPG', 'rb+'))
         for music in os.listdir('music/home'):
@@ -47,6 +49,12 @@ def what(update, context):
         for music in os.listdir('music/worst_world'):
             context.bot.send_audio(id, open(
                 'music/worst_world/' + music, 'rb+'
+            ))
+    elif text == 'демки':
+        context.bot.send_photo(id, open('img/demo.jpg', 'rb+'))
+        for music in os.listdir('music/worst_world'):
+            context.bot.send_audio(id, open(
+                'music/demo/' + music, 'rb+'
             ))
     else:
         context.bot.send_message(id, 'я нихуя не понял, че ты сказал, братан')
