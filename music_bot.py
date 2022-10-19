@@ -52,8 +52,8 @@ def what(update, context):
                 'music/worst_world/' + music, 'rb+'
             ))
     elif text == 'демки':
-        context.bot.send_photo(id, open('img/demo.jpg', 'rb+'))
-        for music in os.listdir('music/worst_world'):
+        context.bot.send_photo(id, open('img/demo.JPG', 'rb+'))
+        for music in os.listdir('music/demo'):
             context.bot.send_audio(id, open(
                 'music/demo/' + music, 'rb+'
             ))
